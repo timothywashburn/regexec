@@ -20,7 +20,7 @@ spec:
       - name: dockerhub-registry
       containers:
       - name: client
-        image: {{ .Values.image.registry }}/regexec:{{ .Values.image.client.tag }}
+        image: {{ .Values.image.registry }}/regexec-client:{{ .Values.image.client.tag }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
         - containerPort: 3000
