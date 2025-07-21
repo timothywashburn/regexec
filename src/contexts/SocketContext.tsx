@@ -42,7 +42,11 @@ export const SocketProvider: React.FC<SocketProviderProps> = ({ children }) => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const socketInstance = io(process.env.NEXT_PUBLIC_SOCKET_URL || 'http://localhost:3001');
+    const socketUrl = window.location.hostname === 'localhost' 
+      ? 'http://localhost:3001'
+      : window.location.origin;
+    
+    const socketInstance = io(socketUrl);
     
     socketInstance.on('connect', () => {
       console.log('✅ Connected to socket server');

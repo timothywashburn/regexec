@@ -27,8 +27,6 @@ spec:
         env:
         - name: NODE_ENV
           value: "production"
-        - name: NEXT_PUBLIC_SOCKET_URL
-          value: "https://{{ .Values.ingress.host }}"
         resources:
           requests:
             memory: "256Mi"
