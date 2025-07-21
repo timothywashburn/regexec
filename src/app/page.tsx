@@ -392,7 +392,7 @@ export default function Home() {
                   />
                   {gameState === 'finished' && (
                     <div className="mt-2 text-xs text-gray-500 dark:text-gray-400">
-                      Opponent's final pattern revealed
+                      Opponent&apos;s final pattern revealed
                     </div>
                   )}
                 </div>
