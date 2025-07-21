@@ -1,0 +1,19 @@
+image:
+  registry: kyrokrypt
+  pullPolicy: Always
+  client:
+    tag: latest
+  server:
+    tag: latest
+
+ingress:
+  host: regexec.timothyw.dev
+  ingressClassName: traefik
+
+namespace: regexec
+
+mysql:
+  storage:
+    size: "2Gi"
+    storageClass: "local-path"
+  port: "30021"
